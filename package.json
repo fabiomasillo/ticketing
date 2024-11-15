@@ -1,0 +1,17 @@
+{
+  "name": "ticketing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "k:delete:deployment": "kubectl delete -f infra/k8s/.",
+    "k:apply:deployment": "kubectl apply -f infra/k8s/.",
+    "k:get:pods": "kubectl get pods",
+    "k:get:services": "kubectl get services",
+    "docker:image:prune": "docker image prune -a",
+    "skaffold:start": "skaffold dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

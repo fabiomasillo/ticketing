@@ -1,0 +1,22 @@
+meta {
+  name: current-user
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/users/current-user
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email":"fabio31@mail.it",
+    "password":"password"
+  }
+}

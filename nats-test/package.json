@@ -1,0 +1,21 @@
+{
+  "name": "nats-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "kubectl:port-forward": "kubectl port-forward nats-depl-64bbf7dc67-gppbd 4222:4222",
+    "kubectl:port-forward-monitoring": "kubectl port-forward nats-depl-6548dccdfb-n7f88 8222:8222",
+    "publish": "ts-node-dev --rs --notify false ./src/publisher.ts",
+    "listen": "ts-node-dev --rs --notify false ./src/listener.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/node": "^22.9.0",
+    "node-nats-streaming": "^0.3.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.3"
+  }
+}

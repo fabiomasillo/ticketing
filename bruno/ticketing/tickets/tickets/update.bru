@@ -1,0 +1,20 @@
+meta {
+  name: update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/api/tickets/673309bf6a0af6f5072ee58e
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "title": "Test title2",
+    "price": 17,
+    "userId": "672e25e50c569f11f37a08ef", 
+    "id": "673309bf6a0af6f5072ee58e"
+  }
+}

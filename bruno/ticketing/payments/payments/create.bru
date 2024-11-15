@@ -1,0 +1,18 @@
+meta {
+  name: create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/payments
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "token":"tok_visa",
+    "orderId":"6735fd087d8c18519d7abbfb"
+  }
+}
