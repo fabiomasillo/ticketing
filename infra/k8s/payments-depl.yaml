@@ -25,9 +25,15 @@ spec:
             - name: NATS_CLUSTER_ID
               value: ticketing
             - name: JWT_KEY
-              value: "my-extreme-secure-key"
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret
+                  key: JWT_KEY
             - name: STRIPE_KEY
-              value: "sk_test_51QL3WpAIlydG80wVvTlDzFGT4LefBWBCgkdlX4LeKuTFGFnJe0BU8lkTHrW52iOR23WyiUePR9Bphjp9Wq2QcdVD00iJ7M0Ip5"
+              valueFrom:
+                secretKeyRef:
+                  name: stripe-secret
+                  key: STRIPE_KEY
             - name: MONGO_URI
               value: "mongodb://payments-mongo-srv:27017/payments"
 ---
